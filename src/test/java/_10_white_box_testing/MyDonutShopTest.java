@@ -17,6 +17,12 @@ class MyDonutShopTest {
 
     MyDonutShop myDonutShop;
 
+    @Mock
+    DeliveryService del;
+    @Mock
+    PaymentService pay;
+    @Mock
+    BakeryService bake;
     @BeforeEach
     void setUp() {
 
@@ -25,7 +31,7 @@ class MyDonutShopTest {
     @Test
     void itShouldTakeDeliveryOrder() throws Exception {
         //given
-
+when()
         //when
 
         //then
@@ -36,7 +42,7 @@ class MyDonutShopTest {
         //given
 
         //when
-
+    	
         //then
     }
 

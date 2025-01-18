@@ -1,6 +1,9 @@
 package _08_mocking.models;
 
 import _07_intro_to_mocking.models.Car;
+import _07_intro_to_mocking.models.Engine;
+import _07_intro_to_mocking.models.GasTank;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -15,7 +18,7 @@ class DeliveryDriverTest {
 
     @BeforeEach
     void setUp() {
-
+deliveryDriver=new DeliveryDriver("john",new Car(new Engine(1.5,1,1,1,1),new GasTank()),new CellPhone());
     }
 
     @Test
@@ -23,7 +26,7 @@ class DeliveryDriverTest {
         //given
 
         //when
-
+assertEquals(true,deliveryDriver.wasteTime());
         //then
     }
 
@@ -32,6 +35,7 @@ class DeliveryDriverTest {
         //given
 
         //when
+    	assertEquals(true,deliveryDriver.refuel(1));
 
         //then
     }
@@ -41,6 +45,7 @@ class DeliveryDriverTest {
         //given
 
         //when
+    	assertEquals(true,deliveryDriver.contactCustomer("1234567890"));
 
         //then
     }

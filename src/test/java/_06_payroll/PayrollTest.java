@@ -11,10 +11,12 @@ class PayrollTest {
     @Test
     void itShouldCalculatePaycheck() {
         //given
-
+double hourlyWage = 12.5;
+int numHours=40;
         //when
-
+double wage = payroll.calculatePaycheck(hourlyWage, numHours);
         //then
+assertEquals(500,wage);
     }
 
     @Test
@@ -24,6 +26,7 @@ class PayrollTest {
         //when
 
         //then
+    	assertEquals(575,payroll.calculateMileageReimbursement(1000));
     }
 
     @Test
@@ -31,7 +34,7 @@ class PayrollTest {
         //given
 
         //when
-
+assertEquals("Hello john, We are pleased to offer you an hourly wage of 12.5",payroll.createOfferLetter("john", 12.5));
         //then
     }
 
